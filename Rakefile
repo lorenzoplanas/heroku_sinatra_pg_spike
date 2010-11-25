@@ -14,20 +14,20 @@ ActiveRecord::Base.establish_connection(
 )
 
 namespace :spike do
-  task :migrate do
-    class CreatePosts < ActiveRecord::Migration
-      def self.up
-        create_table :posts do |t|
-          t.string :title
-          t.string :content
-        end
-      end
-
-      def self.down
-        drop_table :posts
+  class CreatePosts < ActiveRecord::Migration
+    def self.up
+      create_table :posts do |t|
+        t.string :title
+        t.string :content
       end
     end
 
+    def self.down
+      drop_table :posts
+    end
+  end
+
+  task :migrate do
     CreatePosts.up
     Post.create(title: "foo", content: "foo")
   end

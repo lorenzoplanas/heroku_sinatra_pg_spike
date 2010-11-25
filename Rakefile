@@ -27,6 +27,8 @@ namespace :spike do
         drop_table :posts
       end
     end
+
+    CreatePosts.up
   end
 
   task :load do

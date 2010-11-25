@@ -3,12 +3,12 @@ require "sinatra/base"
 require "active_record"
 
 ActiveRecord::Base.establish_connection(
-  :adapter =>  "postgresql",
-  :database => "spike",
-  :encoding => "unicode",
-  :username => "postgres",
-  :password => "kambiame",
-  :pool =>     5
+  adapter:  "postgresql",
+  database: "spike",
+  encoding: "unicode",
+  username: "postgres",
+  password: "kambiame",
+  pool:     5
 )
 
 class Post < ActiveRecord::Base; end

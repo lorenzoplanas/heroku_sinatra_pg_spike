@@ -6,8 +6,6 @@ ActiveRecord::Base.establish_connection(
   adapter:  "postgresql",
   database: "spike",
   encoding: "unicode",
-  username: "postgres",
-  password: "kambiame",
   pool:     5
 )
 

@@ -13,9 +13,11 @@ ActiveRecord::Base.establish_connection(
 
 class Post < ActiveRecord::Base; end
 
-get '/' do
-  @posts = Post.all
-  erb :index 
+class AR < Sinatra::Base
+  get '/' do
+    @posts = Post.all
+    erb :index 
+  end
 end
 
 __END__

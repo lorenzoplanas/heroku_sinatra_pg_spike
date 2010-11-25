@@ -1,6 +1,6 @@
 # encoding: utf-8
-require "sinatra/base"
-require "active_record"
+require "bundler/setup"
+Bundler.require :default
 
 ActiveRecord::Base.establish_connection(
   adapter:  "postgresql",

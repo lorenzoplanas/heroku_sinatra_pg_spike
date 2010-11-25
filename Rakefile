@@ -14,6 +14,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 namespace :spike do
+  class Post < ActiveRecord::Base; end
   class CreatePosts < ActiveRecord::Migration
     def self.up
       create_table :posts do |t|

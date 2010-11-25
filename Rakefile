@@ -29,6 +29,11 @@ namespace :spike do
     end
 
     CreatePosts.up
+    Post.create(title: "foo", content: "foo")
+  end
+
+  task :wipe do
+    CreatePosts.down
   end
 
   task :load do

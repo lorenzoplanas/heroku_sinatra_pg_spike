@@ -17,14 +17,6 @@ class Post < ActiveRecord::Base; end
 
 class AR < Sinatra::Base
   get '/' do
-    @posts = Post.all
-    erb :index 
+    Post.all.map { |p| "<h1>#{p.title}</h1>" }.join "\n"
   end
 end
-
-__END__
-
-@@ index
-<% for post in @posts %>
-  <h1><%= post.title %></h1>
-<% end %>

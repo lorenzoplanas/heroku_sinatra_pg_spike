@@ -1,4 +1,4 @@
 source :gemcutter
 
 gem "sinatra", require: "sinatra/base"
-gem "active_record"
+gem "active-record", require: "active_record"
